@@ -4,7 +4,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "tatchi (https://github.com/tatchi)",
   "repository": "https://github.com/reason-react-native/checkbox.git",
   "license": "MIT",
   "keywords": [
