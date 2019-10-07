@@ -1,13 +1,11 @@
 include ReactNative.NativeElement;
 open ReactNative;
 
-[@bs.deriving abstract]
-type tintColor = {
-  [@bs.optional]
-  true_: Color.t,
-  [@bs.optional]
-  false_: Color.t,
-};
+type tintColors;
+[@bs.obj]
+external tintColors:
+  (~true_: Color.t=?, ~false_: Color.t=?, unit) => tintColors =
+  "";
 
 type checkBoxEvent =
   Event.syntheticEvent({
@@ -25,7 +23,7 @@ external make:
     ~onChange: checkBoxEvent => unit=?,
     ~onValueChange: bool => unit=?,
     ~value: bool=?,
-    ~tintColors: tintColor=?,
+    ~tintColors: tintColors=?,
     // View props
     ~accessibilityComponentType: [@bs.string] [
                                    | `none
