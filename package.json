@@ -1,0 +1,42 @@
+{
+  "name": "@reason-react-native/checkbox",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/reason-react-native/checkbox.git",
+  "license": "MIT",
+  "keywords": [
+    "reason",
+    "reasonml",
+    "bucklescript",
+    "react-native",
+    "react-native-checkbox",
+    "checkbox"
+  ],
+  "files": [
+    "*",
+    "!.DS_Store",
+    "!**/*.bs.js",
+    "!.merlin",
+    "!lib/bs",
+    "!lib/ocaml"
+  ],
+  "scripts": {
+    "start": "bsb -make-world -w",
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "test": "bsb -clean-world -make-world"
+  },
+  "devDependencies": {
+    "bs-platform": "^5.0.4",
+    "react": "^16.8.0",
+    "react-native": "^0.60.0",
+    "reason-react": "^0.7.0",
+    "reason-react-native": "^0.60.0",
+    "@react-native-community/checkbox": "^0.2.0"
+  },
+  "peerDependencies": {
+    "@react-native-community/checkbox": "^0.2.0"
+  }
+}
