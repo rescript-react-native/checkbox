@@ -4,7 +4,7 @@ open ReactNative;
 type tintColors;
 [@bs.obj]
 external tintColors:
-  (~true_: Color.t=?, ~false_: Color.t=?, unit) => tintColors =
+  (~_true: Color.t=?, ~_false: Color.t=?, unit) => tintColors =
   "";
 
 type checkBoxEvent =
