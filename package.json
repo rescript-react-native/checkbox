@@ -5,7 +5,7 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@react-native-community/checkbox": "0.2.0"
+    "@react-native-community/checkbox": "0.4.1"
   },
   "repository": "https://github.com/reason-react-native/checkbox.git",
   "license": "MIT",
