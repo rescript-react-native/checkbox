@@ -14,7 +14,7 @@ type checkBoxEvent =
     "value": bool,
   });
 
-[@react.component] [@bs.module]
+[@react.component] [@bs.module "@react-native-community/checkbox"]
 external make:
   (
     ~ref: ref=?,
@@ -98,4 +98,4 @@ external make:
     ~testID: string=?
   ) =>
   React.element =
-  "@react-native-community/checkbox";
+  "default";
