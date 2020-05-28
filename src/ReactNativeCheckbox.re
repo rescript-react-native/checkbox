@@ -18,12 +18,40 @@ type checkBoxEvent =
 external make:
   (
     ~ref: ref=?,
-    // CheckBox props
-    ~disabled: bool=?,
+    // Common props
     ~onChange: checkBoxEvent => unit=?,
     ~onValueChange: bool => unit=?,
     ~value: bool=?,
+    // Android only props
+    ~disabled: bool=?,
     ~tintColors: tintColors=?,
+    // IOS only props
+    ~lineWidth: float=?, //TIP: offical docs say bool, that's clearly not right
+    ~hideBox: bool=?,
+    ~boxType: [@bs.string] [ | `circle | `square]=?,
+    ~tintColor: string=?,
+    ~onCheckColor: string=?,
+    ~onFillColor: string=?,
+    ~onTintColor: string=?,
+    ~animationDuration: float=?,
+    ~onAnimationType: [@bs.string] [
+                        | `stroke
+                        | `fill
+                        | `bounce
+                        | `flat
+                        | [@bs.as "one-stroke"] `oneStroke
+                        | `fade
+                      ]
+                        =?,
+    ~offAnimationType: [@bs.string] [
+                         | `stroke
+                         | `fill
+                         | `bounce
+                         | `flat
+                         | [@bs.as "one-stroke"] `oneStroke
+                         | `fade
+                       ]
+                         =?,
     // View props
     ~accessibilityComponentType: [@bs.string] [
                                    | `none
