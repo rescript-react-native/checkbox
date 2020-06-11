@@ -16,8 +16,7 @@ type checkBoxEvent =
 external make:
   (
     ~ref: ref=?,
-    // CheckBox props
-    ~disabled: bool=?,
+    // CheckBox common props
     ~onChange: checkBoxEvent => unit=?,
     ~onValueChange: bool => unit=?,
     ~value: bool=?,
@@ -25,7 +24,7 @@ external make:
     ~disabled: bool=?,
     ~tintColors: tintColors=?,
     // CheckBox iOS props
-    ~lineWidth: bool=?,
+    ~lineWidth: float=?,
     ~hideBox: bool=?,
     ~boxType: [@bs.string] [ | `circle | `square]=?,
     ~tintColor: Color.t=?,
@@ -39,7 +38,7 @@ external make:
                         | `bounce
                         | `flat
                         | [@bs.as "one-stroke"] `oneStroke
-                        | `fade'
+                        | `fade
                       ]
                         =?,
     ~offAnimationType: [@bs.string] [
@@ -48,7 +47,7 @@ external make:
                          | `bounce
                          | `flat
                          | [@bs.as "one-stroke"] `oneStroke
-                         | `fade'
+                         | `fade
                        ]
                          =?,
     // View props
