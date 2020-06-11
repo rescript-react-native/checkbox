@@ -16,7 +16,7 @@ type checkBoxEvent =
 external make:
   (
     ~ref: ref=?,
-    // Common props
+    // CheckBox common props
     ~onChange: checkBoxEvent => unit=?,
     ~onValueChange: bool => unit=?,
     ~value: bool=?,
