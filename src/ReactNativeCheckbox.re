@@ -3,9 +3,7 @@ open ReactNative;
 
 type tintColors;
 [@bs.obj]
-external tintColors:
-  (~_true: Color.t=?, ~_false: Color.t=?, unit) => tintColors =
-  "";
+external tintColors: (~_true: int=?, ~_false: int=?, unit) => tintColors;
 
 type checkBoxEvent =
   Event.syntheticEvent({
@@ -22,17 +20,17 @@ external make:
     ~onChange: checkBoxEvent => unit=?,
     ~onValueChange: bool => unit=?,
     ~value: bool=?,
-    // Android only props
+    // CheckBox Android props
     ~disabled: bool=?,
     ~tintColors: tintColors=?,
-    // IOS only props
-    ~lineWidth: float=?, //TIP: offical docs say bool, that's clearly not right
+    // CheckBox iOS props
+    ~lineWidth: float=?,
     ~hideBox: bool=?,
     ~boxType: [@bs.string] [ | `circle | `square]=?,
-    ~tintColor: string=?,
-    ~onCheckColor: string=?,
-    ~onFillColor: string=?,
-    ~onTintColor: string=?,
+    ~tintColor: Color.t=?,
+    ~onCheckColor: Color.t=?,
+    ~onFillColor: Color.t=?,
+    ~onTintColor: Color.t=?,
     ~animationDuration: float=?,
     ~onAnimationType: [@bs.string] [
                         | `stroke
