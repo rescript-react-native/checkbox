@@ -3,9 +3,7 @@ open ReactNative;
 
 type tintColors;
 [@bs.obj]
-external tintColors:
-  (~_true: Color.t=?, ~_false: Color.t=?, unit) => tintColors =
-  "";
+external tintColors: (~_true: int=?, ~_false: int=?, unit) => tintColors;
 
 type checkBoxEvent =
   Event.syntheticEvent({
@@ -14,7 +12,7 @@ type checkBoxEvent =
     "value": bool,
   });
 
-[@react.component] [@bs.module]
+[@react.component] [@bs.module "@react-native-community/checkbox"]
 external make:
   (
     ~ref: ref=?,
@@ -23,7 +21,36 @@ external make:
     ~onChange: checkBoxEvent => unit=?,
     ~onValueChange: bool => unit=?,
     ~value: bool=?,
+    // CheckBox Android props
+    ~disabled: bool=?,
     ~tintColors: tintColors=?,
+    // CheckBox iOS props
+    ~lineWidth: bool=?,
+    ~hideBox: bool=?,
+    ~boxType: [@bs.string] [ | `circle | `square]=?,
+    ~tintColor: Color.t=?,
+    ~onCheckColor: Color.t=?,
+    ~onFillColor: Color.t=?,
+    ~onTintColor: Color.t=?,
+    ~animationDuration: float=?,
+    ~onAnimationType: [@bs.string] [
+                        | `stroke
+                        | `fill
+                        | `bounce
+                        | `flat
+                        | [@bs.as "one-stroke"] `oneStroke
+                        | `fade'
+                      ]
+                        =?,
+    ~offAnimationType: [@bs.string] [
+                         | `stroke
+                         | `fill
+                         | `bounce
+                         | `flat
+                         | [@bs.as "one-stroke"] `oneStroke
+                         | `fade'
+                       ]
+                         =?,
     // View props
     ~accessibilityComponentType: [@bs.string] [
                                    | `none
@@ -98,4 +125,4 @@ external make:
     ~testID: string=?
   ) =>
   React.element =
-  "@react-native-community/checkbox";
+  "default";

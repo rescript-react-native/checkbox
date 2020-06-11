@@ -1,5 +1,13 @@
 # Changelog of `@reason-react-native/checkbox`
 
+## 0.4.0 - 2020-06-11
+
+Bump to react-native-checkbox v0.4
+
+- Fix tintColors (int not string)
+- Add Android disabled prop
+- Add iOS props
+
 ## 0.2.0 - 2019-10-05
 
 Initial release.
