@@ -1,5 +1,10 @@
 # Changelog of `@reason-react-native/checkbox`
 
+## 0.4.1 - 2020-06-11
+
+- Fix some iOS props (lineWidth, onAnimationType, offAnimationType)
+  [#5](https://github.com/reason-react-native/checkbox/pull/5) by @alltonp
+
 ## 0.4.0 - 2020-06-11
 
 Bump to react-native-checkbox v0.4
