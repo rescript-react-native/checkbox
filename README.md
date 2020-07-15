@@ -68,18 +68,13 @@ React Native bindings.
 
 is an alias for `React.Ref.t(Js.nullable(element))`.
 
-### Props
+### CheckBox common props
 
 All props are optional.
 
 #### `value: bool`
 
 Value of the checkbox. When `true`, checkbox will be checked. Default value is
-`false`.
-
-#### `disabled: bool`
-
-When `true`, user will not be able to toggle the checkbox. Default value is
 `false`.
 
 #### `onChange: checkBoxEvent => unit`
@@ -90,15 +85,70 @@ Returns a [native event](#checkBoxEvent).
 
 Returns the new `bool` value.
 
+#### `testID: string`
+
+Used to locate this view in end-to-end tests.
+
+### CheckBox Android props
+
+#### `disabled: bool`
+
+When `true`, user will not be able to toggle the checkbox. Default value is
+`false`.
+
 #### `tintColors`
 
 ```reason
 tintColors:
-  (~_true: ReactNative.Color.t=?, ~_false: ReactNative.Color.t=?, unit) => tintColors
+  (~_true: int=?, ~_false: int=?, unit) => tintColors
 ```
 
 Value for `_true` will be used when the checkbox is checked, and value for
 `_false` will be used when it is not checked.
+
+### CheckBox iOS props
+
+#### `lineWidth: float`
+
+The width of the lines of the check mark and box. Defaults to `2.0`.
+
+#### `hideBox: bool`
+
+Control if the box should be hidden or not. Defaults to `false`
+
+#### `` boxType: `circle or `square ``
+
+The type of box to use. Defaults to `` `circle ``
+
+#### `tintColor: Color.t`
+
+The color of the box when the checkbox is Off. Defaults to `#aaaaaa`
+
+#### `onCheckColor: Color.t`
+
+The color of the check mark when it is On. Defaults to `#007aff`
+
+#### `onFillColor: Color.t`
+
+The color of the inside of the box when it is On. Defaults to transparent
+
+#### `onTintColor: Color.t`
+
+The color of the line around the box when it is On. Defaults to `#007aff`
+
+#### `animationDuration: float`
+
+The duration in seconds of the animations. Defaults to 0.5
+
+#### `` onAnimationType: `stroke or `fill or `bounce or `flat or `oneStroke or `fade ``
+
+The type of animation to use when the checkbox gets checked. Defaults to
+`` `stroke ``
+
+#### `` offAnimationType: `stroke or `fill or `bounce or `flat or `oneStroke or `fade ``
+
+The type of animation to use when the checkbox gets unchecked. Defaults to
+`` `stroke ``
 
 ### `View` props
 
