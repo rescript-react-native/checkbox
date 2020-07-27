@@ -1,5 +1,13 @@
 # Changelog of `@reason-react-native/checkbox`
 
+## 0.4.2 - 2020-07-27
+
+💥 Compat for
+
+- reason-react-native 0.62
+- reason-react 0.9.0
+- bs-platform 8.0.0
+
 ## 0.4.1 - 2020-06-11
 
 - Fix some iOS props (lineWidth, onAnimationType, offAnimationType)
