@@ -46,15 +46,13 @@ yarn add @reason-react-native/checkbox
 
 ### Types
 
-#### `checkBoxEvent`
+#### `CheckBoxEvent.t`
+
+Assuming `checkboxEvent` is `CheckBoxEvent.t`, you can access
 
 ```reason
-type checkBoxEvent =
-  ReactNative.Event.syntheticEvent({
-    .
-    "target": int,
-    "value": bool,
-  });
+checkboxEvent.nativeEvent.target // => int
+checkboxEvent.nativeEvent.value // => bool
 ```
 
 `value` represents value of the checkbox as updated by the event.

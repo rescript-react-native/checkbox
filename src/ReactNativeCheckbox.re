@@ -1,23 +1,27 @@
-include ReactNative.NativeElement;
 open ReactNative;
+include NativeElement;
 
 type tintColors;
 [@bs.obj]
 external tintColors: (~_true: int=?, ~_false: int=?, unit) => tintColors;
 
-type checkBoxEvent =
-  Event.syntheticEvent({
-    .
-    "target": int,
-    "value": bool,
+module CheckBoxEvent = {
+  type payload = {
+    target: int,
+    value: bool,
+  };
+
+  include Event.SyntheticEvent({
+    type _payload = payload;
   });
+};
 
 [@react.component] [@bs.module "@react-native-community/checkbox"]
 external make:
   (
     ~ref: ref=?,
     // CheckBox common props
-    ~onChange: checkBoxEvent => unit=?,
+    ~onChange: CheckBoxEvent.t => unit=?,
     ~onValueChange: bool => unit=?,
     ~value: bool=?,
     // CheckBox Android props
@@ -50,7 +54,7 @@ external make:
                          | `fade
                        ]
                          =?,
-    // View props
+    // View props 0.62.0
     ~accessibilityComponentType: [@bs.string] [
                                    | `none
                                    | `button
@@ -75,10 +79,21 @@ external make:
                           | `header
                           | `summary
                           | `imagebutton
+                          | `article
+                          | `banner
+                          | `complementary
+                          | `contentinfo
+                          | `form
+                          | `list
+                          | `listitem
+                          | `main
+                          | `navigation
+                          | `region
                         ]
                           =?,
-    ~accessibilityStates: array(AccessibilityState.t)=?,
+    ~accessibilityState: Accessibility.state=?,
     ~accessibilityTraits: array(AccessibilityTrait.t)=?,
+    ~accessibilityValue: Accessibility.value=?,
     ~accessibilityViewIsModal: bool=?,
     ~accessible: bool=?,
     ~collapsable: bool=?,
@@ -121,7 +136,16 @@ external make:
     ~renderToHardwareTextureAndroid: bool=?,
     ~shouldRasterizeIOS: bool=?,
     ~style: Style.t=?,
-    ~testID: string=?
+    ~testID: string=?,
+    ~children: React.element=?,
+    // React Native Web Props
+    ~onMouseDown: ReactEvent.Mouse.t => unit=?,
+    ~onMouseEnter: ReactEvent.Mouse.t => unit=?,
+    ~onMouseLeave: ReactEvent.Mouse.t => unit=?,
+    ~onMouseMove: ReactEvent.Mouse.t => unit=?,
+    ~onMouseOver: ReactEvent.Mouse.t => unit=?,
+    ~onMouseOut: ReactEvent.Mouse.t => unit=?,
+    ~onMouseUp: ReactEvent.Mouse.t => unit=?
   ) =>
   React.element =
   "default";
