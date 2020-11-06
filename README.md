@@ -15,7 +15,7 @@ with version x.y.z of `@react-native-community/react-native-checkbox`.
 ## Installation
 
 When
-[`@react-native-community/react-native-checkbox`](`https://github.com/react-native-community/react-native-checkbox`)
+[`@react-native-community/react-native-checkbox`](https://github.com/react-native-community/react-native-checkbox)
 is properly installed & configured by following their installation instructions,
 you can install the bindings:
 
