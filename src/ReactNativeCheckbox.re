@@ -24,13 +24,13 @@ external make:
     ~onChange: CheckBoxEvent.t => unit=?,
     ~onValueChange: bool => unit=?,
     ~value: bool=?,
-    // CheckBox Android props
     ~disabled: bool=?,
+    // CheckBox Android props
     ~tintColors: tintColors=?,
     // CheckBox iOS props
     ~lineWidth: float=?,
     ~hideBox: bool=?,
-    ~boxType: [@bs.string] [ | `circle | `square]=?,
+    ~boxType: [ | `circle | `square]=?,
     ~tintColor: Color.t=?,
     ~onCheckColor: Color.t=?,
     ~onFillColor: Color.t=?,
@@ -54,45 +54,15 @@ external make:
                          | `fade
                        ]
                          =?,
-    // View props 0.62.0
-    ~accessibilityComponentType: [@bs.string] [
-                                   | `none
-                                   | `button
-                                   | `radiobutton_checked
-                                   | `radiobutton_unchecked
-                                 ]
-                                   =?,
+    // View props 0.63.0
+    ~accessibilityActions: array(Accessibility.actionInfo)=?,
     ~accessibilityElementsHidden: bool=?,
     ~accessibilityHint: string=?,
     ~accessibilityIgnoresInvertColors: bool=?,
     ~accessibilityLabel: string=?,
-    ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertive]=?,
-    ~accessibilityRole: [@bs.string] [
-                          | `none
-                          | `button
-                          | `link
-                          | `search
-                          | `image
-                          | `keyboardkey
-                          | `text
-                          | `adjustable
-                          | `header
-                          | `summary
-                          | `imagebutton
-                          | `article
-                          | `banner
-                          | `complementary
-                          | `contentinfo
-                          | `form
-                          | `list
-                          | `listitem
-                          | `main
-                          | `navigation
-                          | `region
-                        ]
-                          =?,
+    ~accessibilityLiveRegion: Accessibility.liveRegion=?,
+    ~accessibilityRole: Accessibility.role=?,
     ~accessibilityState: Accessibility.state=?,
-    ~accessibilityTraits: array(AccessibilityTrait.t)=?,
     ~accessibilityValue: Accessibility.value=?,
     ~accessibilityViewIsModal: bool=?,
     ~accessible: bool=?,
@@ -108,6 +78,7 @@ external make:
                                   =?,
     ~nativeID: string=?,
     ~needsOffscreenAlphaCompositing: bool=?,
+    ~onAccessibilityAction: Accessibility.actionEvent => unit=?,
     ~onAccessibilityEscape: unit => unit=?,
     ~onAccessibilityTap: unit => unit=?,
     ~onLayout: Event.layoutEvent => unit=?,
