@@ -1,5 +1,9 @@
 # Changelog of `@reason-react-native/checkbox`
 
+## 0.5.1 - 2020-11-17
+
+Fix npm description
+
 ## 0.5.0 - 2020-11-06
 
 - ReScript / bs-platform 8.2.0
