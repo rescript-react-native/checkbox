@@ -5,7 +5,7 @@
 [![Chat](https://img.shields.io/discord/235176658175262720.svg?logo=discord&colorb=blue)](https://reasonml-community.github.io/reason-react-native/discord/)
 
 [ReScript](https://rescript-lang.org) / [Reason](https://reasonml.github.io) bindings for
-[`@react-native-community/react-native-checkbox`](https://github.com/react-native-community/react-native-checkbox).
+[`@react-native-community/react-native-checkbox`](https://github.com/react-native-checkbox/react-native-checkbox).
 
 The module will be exposed as `ReactNativeCheckbox`.
 
@@ -15,7 +15,7 @@ with version x.y.z of `@react-native-community/react-native-checkbox`.
 ## Installation
 
 When
-[`@react-native-community/react-native-checkbox`](https://github.com/react-native-community/react-native-checkbox)
+[`@react-native-community/react-native-checkbox`](https://github.com/react-native-checkbox/react-native-checkbox)
 is properly installed & configured by following their installation instructions,
 you can install the bindings:
 
