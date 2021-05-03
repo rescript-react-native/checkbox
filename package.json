@@ -1,7 +1,7 @@
 {
   "name": "@rescript-react-native/checkbox",
   "description": "ReScript bindings for @react-native-community/checkbox.",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "publishConfig": {
     "access": "public"
   },
