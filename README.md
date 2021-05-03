@@ -1,15 +1,15 @@
-# `@reason-react-native/checkbox`
+# `@rescript-react-native/checkbox`
 
-[![Build Status](https://github.com/reason-react-native/checkbox/workflows/Build/badge.svg)](https://github.com/reason-react-native/checkbox/actions)
-[![Version](https://img.shields.io/npm/v/@reason-react-native/checkbox.svg)](https://www.npmjs.com/@reason-react-native/checkbox)
-[![Chat](https://img.shields.io/discord/235176658175262720.svg?logo=discord&colorb=blue)](https://reasonml-community.github.io/reason-react-native/discord/)
+[![Build Status](https://github.com/rescript-react-native/checkbox/workflows/Build/badge.svg)](https://github.com/rescript-react-native/checkbox/actions)
+[![Version](https://img.shields.io/npm/v/@rescript-react-native/checkbox.svg)](https://www.npmjs.com/@rescript-react-native/checkbox)
+[![ReScript Forum](https://img.shields.io/discourse/posts?color=e6484f&label=ReScript%20Forum&server=https%3A%2F%2Fforum.rescript-lang.org)](https://forum.rescript-lang.org/)
 
-[ReScript](https://rescript-lang.org) / [Reason](https://reasonml.github.io) bindings for
+[ReScript](https://rescript-lang.org) bindings for
 [`@react-native-community/react-native-checkbox`](https://github.com/react-native-checkbox/react-native-checkbox).
 
 The module will be exposed as `ReactNativeCheckbox`.
 
-Version x.y.z of `@reason-react-native/checkbox` is intended to be compatible
+Version x.y.z of `@rescript-react-native/checkbox` is intended to be compatible
 with version x.y.z of `@react-native-community/react-native-checkbox`.
 
 ## Installation
@@ -20,22 +20,22 @@ is properly installed & configured by following their installation instructions,
 you can install the bindings:
 
 ```console
-npm install @reason-react-native/checkbox
+npm install @rescript-react-native/checkbox
 # or
-yarn add @reason-react-native/checkbox
+yarn add @rescript-react-native/checkbox
 ```
 
-`@reason-react-native/checkbox` should be added to `bs-dependencies` in your
+`@rescript-react-native/checkbox` should be added to `bs-dependencies` in your
 `bsconfig.json`. For example,
 
 ```diff
 {
   //...
   "bs-dependencies": [
-    "reason-react",
-    "reason-react-native",
+    "@rescript/react",
+    "rescript-react-native",
     // ...
-+    "@reason-react-native/checkbox"
++    "@rescript-react-native/checkbox"
   ],
   //...
 }
@@ -49,7 +49,7 @@ yarn add @reason-react-native/checkbox
 
 Assuming `checkboxEvent` is `CheckBoxEvent.t`, you can access
 
-```reason
+```rescript
 checkboxEvent.nativeEvent.target // => int
 checkboxEvent.nativeEvent.value // => bool
 ```
@@ -95,7 +95,7 @@ When `true`, user will not be able to toggle the checkbox. Default value is
 
 #### `tintColors`
 
-```reason
+```rescript
 tintColors:
   (~_true: int=?, ~_false: int=?, unit) => tintColors
 ```
@@ -150,8 +150,8 @@ The type of animation to use when the checkbox gets unchecked. Defaults to
 ### `View` props
 
 Refer to
-[`reason-react-native`](https://github.com/reason-react-native/react-native)
-[documentation](https://reasonml-community.github.io/reason-react-native/en/docs/components/View/).
+[`rescript-react-native`](https://github.com/rescript-react-native/react-native)
+[documentation](https://rescript-react-native.github.io/en/docs/components/View/).
 
 ---
 
@@ -162,10 +162,10 @@ releases.
 
 ## Contribute
 
-Read the [contribution guidelines](https://github.com/reason-react-native/.github/blob/master/CONTRIBUTING.md) before contributing.
+Read the [contribution guidelines](https://github.com/rescript-react-native/.github/blob/master/CONTRIBUTING.md) before contributing.
 
 ## Code of Conduct
 
 We want this community to be friendly and respectful to each other. Please read
-[our full code of conduct](https://github.com/reason-react-native/.github/blob/master/CODE_OF_CONDUCT.md) so that you can understand what
+[our full code of conduct](https://github.com/rescript-react-native/.github/blob/master/CODE_OF_CONDUCT.md) so that you can understand what
 actions will and will not be tolerated.
